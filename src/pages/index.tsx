@@ -1,23 +1,10 @@
-import { Page } from "../layouts/OneColumnLayout";
-import Blog from "./blog";
-import Home from "./home";
-import Platform from "./platform";
+import { lazy } from "react";
+import { Waiting } from "../components/Loader";
 
 const Pages = {
-  Home: () => (
-    <Page
-      hero={<Home.Hero />}
-      content={
-        <>
-          <Home.First />
-          <Home.Second />
-          <Home.Third />
-        </>
-      }
-    />
-  ),
-  Blog: () => <Page hero={<Blog.Hero />} />,
-  Platform: Platform,
+  Home: Waiting(lazy(() => import("./home"))),
+  Blog: Waiting(lazy(() => import("./blog"))),
+  Platform: Waiting(lazy(() => import("./platform"))),
 };
 
 export default Pages;

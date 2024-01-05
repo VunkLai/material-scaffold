@@ -11,6 +11,7 @@ import {
   Toolbar,
   useScrollTrigger,
 } from "@mui/material";
+import { Suspense } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { useApp } from "../contexts/AppContext";
 
@@ -115,13 +116,15 @@ interface PageProps {
 
 const Page = ({ hero, content }: PageProps) => {
   return (
-    <div className="w-full">
-      <div className="min-h-screen h-fit">{hero}</div>
-      {content && <div id="second-content-anchor">{content}</div>}
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="w-full">
+        <div className="min-h-screen h-fit">{hero}</div>
+        {content && <div id="second-content-anchor">{content}</div>}
+      </div>
+    </Suspense>
   );
 };
 
 export default OneColumnLayout;
 
-export { Page, Header };
+export { Header, Page };

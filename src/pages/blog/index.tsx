@@ -1,7 +1,8 @@
+import { Page } from "../../layouts/OneColumnLayout";
 import Hero from "./Hero";
 
-const Blog = {
-  Hero,
+const Blog = () => {
+  return <Page hero={<Hero />} />;
 };
 
 export default Blog;
