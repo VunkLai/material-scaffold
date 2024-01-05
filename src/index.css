@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /*
+  * Once the font is imported via @fontsource,
+  * use the font-family name associated with the font package you installed.
+  */
+  font-family: "roboto", sans-serif;
+}
+
+.debug {
+  @apply outline outline-sky-500;
+}
