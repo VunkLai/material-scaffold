@@ -1,0 +1,132 @@
+.card {
+  /* transition: 0.5s; */
+}
+
+.card:hover {
+  /* height: 450px; */
+}
+
+.card .lines {
+}
+
+.card .lines::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 120px;
+  background: linear-gradient(
+    transparent,
+    #45f3ff,
+    #45f3ff,
+    #45f3ff,
+    transparent
+  );
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.card .lines:after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #292929;
+}
+
+.card .imgBx {
+  /* position: absolute; */
+  top: -60px;
+  left: 50%;
+  /* width: 150px;
+  height: 150px; */
+  transform: translateX(-50%);
+  /* transition: 0.5s; */
+  /* image center */
+  /* overflow: hidden; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.card:hover .imgBx {
+  top: 50px;
+  width: 250px;
+  height: 250px;
+}
+
+.card .imgBx::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    transparent,
+    #ff3c7b,
+    #ff3c7b,
+    #ff3c7b,
+    transparent
+  );
+  animation: animate2 4s linear infinite;
+  animation-play-state: paused;
+}
+
+.card:hover .imgBx::before {
+  animation-play-state: running;
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+.card .imgBx::after {
+  /* content: "";
+  position: absolute;
+  inset: 3px;
+  background: #292929; */
+}
+
+.card .imgBx img {
+  /* filter: invert(1); */
+}
+
+.card:hover .imgBx img {
+  opacity: 1;
+}
+
+.card .content .details {
+  padding: 30px 20px;
+  text-align: center;
+  transition: 0.5s;
+  width: 100%;
+  transform: translateY(90px);
+}
+
+.card:hover .content .details {
+  transform: translateY(0px);
+}
+
+.card:hover .content .details p,
+.card:hover .content .details a {
+  opacity: 1;
+}
+
+.card .content .details a {
+  display: inline-block;
+}
