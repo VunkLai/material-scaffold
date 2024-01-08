@@ -24,6 +24,10 @@ const routes: RouteObject[] = [
       // ...
     ],
   },
+  {
+    path: "/playground",
+    element: <Pages.Playground />,
+  },
 ];
 
 export default createBrowserRouter(routes);
