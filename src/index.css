@@ -12,6 +12,39 @@ body {
   scroll-behavior: smooth;
 }
 
+@layer base {
+  button {
+    @apply px-4 py-2 m-1 rounded-lg active:scale-95 h-fit w-fit;
+  }
+}
+
+@layer utilities {
+  .row-center {
+    @apply flex flex-row items-center justify-center;
+  }
+
+  .btn-primary {
+    @apply text-black bg-primary-main border-primary-main dark:bg-primary-main dark:text-white dark:border-primary-light;
+  }
+
+  .secondary {
+    @apply bg-green-500 border-green-500 dark:bg-green-900 dark:border-green-900;
+  }
+
+  /* .contained {
+    @apply text-red-500 border-none;
+  } */
+
+  .btn-text {
+    @apply bg-transparent border-none;
+  }
+
+  .outlined {
+    @apply bg-transparent border;
+    border-style: solid;
+  }
+}
+
 .debug {
   @apply border border-sky-500;
 }
