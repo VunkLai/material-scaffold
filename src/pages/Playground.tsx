@@ -1,10 +1,11 @@
-// import dotMap from "../images/dot-map.svg";
-import MapHero from "../ui/DotMap";
+import Loading from "../ui/Loading";
 
 const Playground = () => {
   return (
-    <div className="w-full h-screen ">
-      <MapHero title={"Hello World"} />
+    <div className="relative grid w-full h-screen place-content-center">
+      <div className="absolute grid border inset-4 border-sky-500 place-content-center">
+        <Loading />
+      </div>
     </div>
   );
 };

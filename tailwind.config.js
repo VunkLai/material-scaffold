@@ -3,7 +3,7 @@
 import colors from "tailwindcss/colors";
 
 export default {
-  content: ["./src/**/*.tsx"],
+  content: ["./src/**/*.tsx", "./src/**/*.svg"],
   darkMode: "class",
   theme: {
     colors: {
@@ -17,6 +17,19 @@ export default {
     extend: {
       container: {
         center: true,
+      },
+      keyframes: {
+        rotate360: {
+          from: {
+            transform: "rotate(0deg)",
+          },
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
+      },
+      animation: {
+        rotate360: "rotate360 240s infinite linear",
       },
     },
   },
