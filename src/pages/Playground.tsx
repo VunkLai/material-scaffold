@@ -1,13 +1,10 @@
-import { SectionCard } from "../ui/SectionCard";
+// import dotMap from "../images/dot-map.svg";
+import MapHero from "../ui/DotMap";
 
 const Playground = () => {
   return (
-    <div className="w-full h-screen row-center">
-      <div className="container relative flex-wrap gap-16 px-2 py-4 row-center">
-        <SectionCard />
-        <SectionCard />
-        <SectionCard />
-      </div>
+    <div className="w-full h-screen ">
+      <MapHero title={"Hello World"} />
     </div>
   );
 };
