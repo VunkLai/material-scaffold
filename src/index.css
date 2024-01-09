@@ -19,6 +19,14 @@ body {
 }
 
 @layer utilities {
+  .bg-plaid {
+    background: linear-gradient(black 0 2px, transparent 2px 100px) 50% 50% /
+        100px 100px,
+      linear-gradient(90deg, black 0 2px, transparent 2px 100px) 50% 50% / 100px
+        100px;
+    mask: linear-gradient(25deg, white, transparent);
+  }
+
   .row-center {
     @apply flex flex-row items-center justify-center;
   }
