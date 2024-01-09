@@ -1,0 +1,65 @@
+.bg-polygon svg polygon,
+.bg-polygon svg polyline,
+.bg-polygon svg line {
+  stroke: #fff;
+  fill: none;
+  stroke-width: 1;
+  stroke-miterlimit: 10;
+}
+
+.bg-polygon svg polygon {
+  animation-name: polygon;
+}
+
+.bg-polygon svg .hex1 {
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+.bg-polygon svg .hex2 {
+  animation-duration: 8s;
+  animation-fill-mode: forwards;
+}
+
+.bg-polygon svg .hex3 {
+  animation-duration: 12s;
+  animation-fill-mode: backwards;
+  animation-direction: alternate;
+}
+
+.bg-polygon svg .hex4 {
+  animation-duration: 10s;
+  animation-fill-mode: backwards;
+  animation-direction: alternate;
+}
+
+.bg-polygon svg circle {
+  fill: #fff;
+
+  animation-name: circle-glow;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes polygon {
+  0% {
+    stroke-dasharray: 0 300;
+  }
+  100% {
+    stroke-dasharray: 300 0;
+  }
+}
+
+@keyframes circle-glow {
+  0% {
+    fill: hsla(209, 20%, 32%, 1);
+  }
+  50% {
+    fill: hsla(209, 20%, 49%, 1);
+  }
+  100% {
+    fill: hsla(360, 100%, 100%, 1);
+  }
+}

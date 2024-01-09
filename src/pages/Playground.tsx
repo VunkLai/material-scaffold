@@ -1,10 +1,11 @@
-import Loading from "../ui/Loading";
+import Polygon from "./BgPolygon";
 
 const Playground = () => {
   return (
-    <div className="relative grid w-full h-screen place-content-center">
-      <div className="absolute grid border inset-4 border-sky-500 place-content-center">
-        <Loading />
+    <div className="relative w-full h-screen overflow-hidden">
+      <Polygon />
+      <div className="absolute grid overflow-y-auto inset-4 place-items-center">
+        <h1 className="h-64 border w-96 border-sky-500">Hello World</h1>
       </div>
     </div>
   );
